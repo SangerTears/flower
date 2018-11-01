@@ -1,0 +1,77 @@
+<!--pages/home/home.wxml-->
+<view>
+  <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" duration="{{duration}}">
+    <block wx:for="{{imgUrls}}" wx:key="{{key}}">
+      <swiper-item>
+         <image src="{{item.picUrl}}" class="slide-image"/>
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class="flower_title">
+    <text>精选好肉</text>
+  </view>
+  <view class='flower_nice'>
+    <block wx:for="{{imgUrls}}" wx:key="{{key}}">
+      <view class="flower_list">
+         <image src="{{item.picUrl}}" class="slide-image"/>
+          <text>{{item.imgTitle}}</text>
+          <view class='pric_title'>
+            {{item.price}}
+            <view class='price_buy'>购买</view>
+          </view>
+      </view>
+    </block>
+  </view>
+  <view class='flower_theam'>
+    <text class='theam_title'>Story主题系列</text>
+    <text class='theam_stitle'>每个多肉都有一个属于自己的故事</text>
+    <image src='http://img06.tooopen.com/images/20160818/tooopen_sy_175833047715.jpg'></image>
+    <view class="theam_price">
+      <view class='team_price'>¥99.00</view>
+      <view class='theam_buy'>购买</view>
+    </view>
+  </view>
+  <view class='flower_nice'>
+    <block wx:for="{{imgUrls}}" wx:key="{{key}}">
+      <view class="flower_list">
+         <image src="{{item.picUrl}}" class="slide-image"/>
+          <text>{{item.imgTitle}}</text>
+          <view class='pric_title'>
+            {{item.price}}
+            <view class='price_buy'>购买</view>
+          </view>
+      </view>
+    </block>
+  </view>
+  <view class='found_nice'>
+    <view class='found_title'>好物精选区</view>
+    <image src='http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg'></image>
+  </view>
+  <view class='found_nices'>
+    <block wx:for="{{foundUrls}}" wx:key="{{key}}">
+      <view class="found_list">
+         <image src="{{item.picUrl}}" class="slide-image"/>
+          <text>{{item.imgTitle}}</text>
+          <view class='pric_title'>
+            {{item.price}}
+            <view class='price_buy'>+</view>
+          </view>
+      </view>
+    </block>
+  </view>
+  <view class='flower_qi'>
+    <text class='qi_title'>美好花器</text>
+    <text class='qi_stitle'>用心承载每一次的绽放</text>
+  </view>
+  <view class='found_nices'>
+    <block wx:for="{{foundUrls}}" wx:key="{{key}}">
+      <view class="found_list">
+         <image src="{{item.picUrl}}" class="slide-image"/>
+          <text>{{item.imgTitle}}</text>
+          <view class='pric_title'>
+            {{item.price}}
+          </view>
+      </view>
+    </block>
+  </view>
+</view>
